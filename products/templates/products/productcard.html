@@ -1,0 +1,24 @@
+<div class="col-md-4 col-sm-6">
+    <figure class="card card-product-grid">
+        <div class="img-wrap"> 
+            {% if product.is_new %}
+            <span style="z-index:59;" class="badge badge-danger"> NEW </span>
+            {%endif%}
+            <a href="{{product.get_absolute_url}}" class="img-wrap"> 
+                <img src="{{product.main_image.url}}">
+            </a>
+
+            <a class="btn-overlay" href="{{product.get_absolute_url}}"><i class="fa fa-search-plus"></i> Quick view</a>
+        </div> <!-- img-wrap.// -->
+        <figcaption class="info-wrap">
+            <div class="fix-height">
+                <a href="{{product.get_absolute_url}}" class="title">{{product.title}}</a>
+                <div class="price-wrap mt-2">
+                    <span class="price">GHC {{product.price}}</span>
+                    <del class="price-old">$1980</del>
+                </div> <!-- price-wrap.// -->
+            </div>
+            <a href="#" class="btn btn-block btn-primary">Add to cart </a>
+        </figcaption>
+    </figure>
+</div> <!-- col.// -->
