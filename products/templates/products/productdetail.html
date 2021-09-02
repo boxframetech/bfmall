@@ -71,13 +71,16 @@
                             </div>
 
                             <div class="mb-3">
-                                <var class="price h4">GHC {{object.price}}</var> <br>
-                                <!-- <span class="monthly">$32.00 / monthly <a href="#" class="btn-link">installment </a></span> -->
+                                <var class="price h4">GH₵{{object.price}}</var> <br>
+                                <!-- <span class="monthly">GH₵32.00 / monthly <a href="#" class="btn-link">installment </a></span> -->
                             </div> <!-- price-detail-wrap .// -->
 
                             <div class="mb-4">
                                 <a href="#" class="btn btn-primary">Buy now</a>
-                                <a href="#" class="btn btn-light">Add to card</a>
+                                
+                                <!-- Adding and removing to cart functionality -->
+                                {% include 'products/snippet/update-cart.html' with product=object cart=cart %}
+                                <!-- End of adding and removing to cart functionality -->
                             </div>
                             
                         </article> <!-- product-info-aside .// -->

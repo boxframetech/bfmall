@@ -8,3 +8,4 @@ class HomepageView(ListView):
     queryset = Product.objects.filter(featured=True)
     template_name = 'index.html'
 
+ 

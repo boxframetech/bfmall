@@ -3,7 +3,7 @@
 {%block content%}
 <section class="section-main bg padding-y">
     <div class="container">
-    
+        {{product_in_cart.count}}
     <div class="row">
         <aside class="col-md-3">
             <nav class="card">
@@ -38,11 +38,10 @@
 <!-- PRODUCTS LIST DISPLAY -->
     <section class="section-name padding-y-sm">
         <div class="container">
-        
-        <header class="section-heading">
-            <a href="{%url 'all-product'%}" class="btn btn-outline-primary float-right">See all</a>
-            <h3 class="section-title">Popular products</h3>
-        </header><!-- sect-heading -->
+            <header class="section-heading">
+                <a href="{%url 'all-product'%}" class="btn btn-outline-primary float-right">See all</a>
+                <h3 class="section-title">Popular products</h3>
+            </header><!-- sect-heading -->
         
             
         <div class="row">

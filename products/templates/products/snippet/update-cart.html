@@ -1,0 +1,15 @@
+<form method="POST" action="{%url 'cart:cartupdate'%}" class="form">{%csrf_token%}
+    <input type="hidden" name="product_id" value="{{product.id}}">
+    {%if incart%}
+        <button type="submit" class="btn btn-danger"><i class="fas fa-eraser"></i></button>
+    {%else%}
+        {% if product in cart.product.all %}
+            <button type="submit" class="btn btn-danger"><i class="fas fa-eraser"></i></button>
+        {% else %}
+            <button type="submit" class="btn btn-success">
+                <i class="icon-sm rounded-circle border fa fa-shopping-cart"></i>
+            </button>
+        {%endif%}
+    {%endif%}
+</form>
+

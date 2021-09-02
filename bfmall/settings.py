@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'bfmalladmin',
     'carts',
+    'orders',
     'pages',
     'products',
     'search',

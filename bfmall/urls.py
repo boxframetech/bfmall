@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include('pages.urls')),
     path('bfmalladmin', include('bfmalladmin.urls')),
     path('products/', include('products.urls')), 
+    path('cart/', include('carts.urls',namespace='cart')), 
     path('search/', include('search.urls',namespace='search')),
 
     # path('search/', include(('search.urls','search'), namespace='search')),
